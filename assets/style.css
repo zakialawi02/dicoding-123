@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  color: #141414;
+  background-color: #4bb4de;
+}
+
+header {
+  padding: 0.5rem 2.5rem;
+  top: 0;
+  position: sticky;
+  background-color: #4bb4de;
+}
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1.4em;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  transition: 0.2s ease-in;
+}
+
+header nav ul li {
+  padding: 10px;
+  margin: 5px;
+  font-weight: 700;
+}
+
+header nav ul li a {
+  color: white;
+  transition: 0.2s ease-in;
+}
+header nav ul li a:hover {
+  color: #345da7;
+}
+
+header .hamb {
+  display: none;
+  font-size: x-large;
+  font-weight: 700;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.4em;
+  max-width: 1240px;
+  margin: auto;
+  padding: 20px;
+}
+
+aside {
+  flex: 1 0 315px;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 10px;
+}
+
+aside img {
+  object-fit: contain;
+  width: 14em;
+  margin: 1.2em auto;
+  padding: 10px;
+  border: 1px solid #252525;
+  border-radius: 10px;
+}
+
+.wrapper-profile {
+  margin: 0 auto;
+  padding: 1em;
+}
+
+table tr th,
+table tr td {
+  min-width: 40%;
+  text-align: start;
+  padding: 5px;
+}
+
+.sosmed {
+  font-weight: 700;
+  text-align: center;
+  padding: 2em 1.2em;
+}
+.sosmed li {
+  display: inline;
+}
+.sosmed li a {
+  color: whitesmoke;
+  padding: 0.6em 1em;
+  margin: 0 5px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px whitesmoke;
+}
+
+.sosmed li a:hover {
+  cursor: pointer;
+  box-shadow: -1px 1px 5px rgb(51, 51, 51) inset;
+}
+
+.container {
+  min-height: 100vh;
+  flex: 1 1 600px;
+  padding: 10px;
+  border-left: 2px solid whitesmoke;
+}
+
+.container h2 {
+  font-size: 1.8em;
+  margin: 0.2em 0;
+  padding: 0.4em 0;
+}
+
+.content {
+  padding: 0.4em;
+  margin: 0.2em;
+  padding: 0.8em;
+}
+#about {
+  padding-top: 2rem;
+}
+#about p {
+  line-height: 1.2em;
+  padding-bottom: 10px;
+}
+#education {
+  padding-top: 4rem;
+  background-color: #4bb4de;
+}
+.edu-body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0.5em;
+  margin: 0.2em;
+}
+.edu-head {
+  flex: 1 0 180px;
+  padding: 0.4em;
+}
+.edu-isi {
+  flex: 1 1 400px;
+  padding: 0.4em;
+}
+#experience {
+  padding-top: 4rem;
+}
+.exp-body {
+  display: block;
+  padding: 0.8em 0.5em;
+  margin: 0.4em 0.2em;
+}
+.exp-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.4em;
+}
+.exp-isi {
+  padding: 0.4em;
+}
+#skills {
+  padding-top: 4rem;
+  margin-top: 3rem;
+  min-height: 90vh;
+}
+.skills-icon {
+  padding: 1em;
+  text-align: center;
+}
+
+.skills-icon li {
+  display: inline;
+  margin: 0 5px;
+}
+
+.skills-icon img {
+  width: 6rem;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+}
+
+footer {
+  background-color: #252525;
+  color: white;
+  min-height: 2em;
+  padding: 14px;
+  text-align: center;
+}
+
+@media (max-width: 994px) {
+  aside {
+    flex-direction: row;
+  }
+  .container {
+    border: none;
+  }
+}
+@media (max-width: 720px) {
+  header nav {
+    justify-content: flex-end;
+  }
+  header nav ul {
+    display: block;
+    position: absolute;
+    top: -200px;
+    right: 0;
+    background-color: #4bb4de;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 0px 10px #252525;
+  }
+  .menu.show {
+    top: 0px;
+  }
+  header .hamb {
+    display: block;
+    color: whitesmoke;
+    cursor: pointer;
+    padding: 0.2em 0.4em;
+    background-color: #345da7;
+    border-radius: 8px;
+    z-index: 1;
+  }
+  aside {
+    flex-direction: column;
+  }
+  .exp-head {
+    flex-direction: column-reverse;
+  }
+}
